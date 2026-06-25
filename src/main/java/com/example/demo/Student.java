@@ -5,34 +5,53 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "students")
 public class Student {
+  
   @Id
   private String indexNumber;
-  private String refNumber;
-
+  private String referenceNumber;
   private String fullName;
+  private String nfcCode;
+  private boolean checked = false;
 
-  public String indexNumber() {
+
+  public String getIndexNumber() {
     return indexNumber;
   }
 
-  public void indexNumber(String indexNumber) {
+  public void setIndexNumber(String indexNumber) {
     this.indexNumber = indexNumber;
   }
 
-  public String refNumber() {
-    return refNumber;
+  public String getReferenceNumber() {
+    return referenceNumber;
   }
 
-  public void refNumber(String refNumber) {
-    this.refNumber = refNumber;
+  public void setReferenceNumber(String referenceNumber) {
+    this.referenceNumber = referenceNumber;
   }
 
-  public String fullName() {
+  public String getFullName() {
     return fullName;
   }
 
-  public void fullName(String fullName) {
+  public void setFullName(String fullName) {
     this.fullName = fullName;
   }
 
+  public String getNfcCode() {
+    return nfcCode;
+  }
+
+  public void setNfcCode(String nfcCode) {
+    this.nfcCode = nfcCode;
+  }
+
+  public boolean isChecked() {
+    return checked;
+  }
+
+  public void setChecked(boolean checked) {
+    this.checked = checked;
+  }
 }
+
