@@ -5,18 +5,20 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "elements")
 public class Element {
-  @Id
-  private String id;
+  
+  @Id // Required: Marks indexNumber as the primary key for the 'elements' table
+  private String indexNumber;
   private String nfcCode;
+  private boolean checked = false;
 
-  private boolean checked;
+  // --- GETTERS & SETTERS ---
 
-  public String getId() {
-    return id;
+  public String getIndexNumber() {
+    return indexNumber;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setIndexNumber(String indexNumber) {
+    this.indexNumber = indexNumber;
   }
 
   public String getNfcCode() {
@@ -34,5 +36,42 @@ public class Element {
   public void setChecked(boolean checked) {
     this.checked = checked;
   }
-
 }
+// package com.example.demo;
+//
+// import jakarta.persistence.*;
+//
+// @Entity
+// @Table(name = "elements")
+// public class Element {
+//   @Id
+//   private String indexNumber;
+//   private String nfcCode;
+//
+//   private boolean checked;
+//
+//   public String getId() {
+//     return indexNumber;
+//   }
+//
+//   public void setId(String id) {
+//     this.indexNumber = id;
+//   }
+//
+//   public String getNfcCode() {
+//     return nfcCode;
+//   }
+//
+//   public void setNfcCode(String nfcCode) {
+//     this.nfcCode = nfcCode;
+//   }
+//
+//   public boolean isChecked() {
+//     return checked;
+//   }
+//
+//   public void setChecked(boolean checked) {
+//     this.checked = checked;
+//   }
+//
+// }
